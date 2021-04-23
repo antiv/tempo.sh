@@ -4,6 +4,10 @@ Summarizes your logged hours in the jira Tempo for the previous day and sends a 
 
 NOTE: Tested with Tempo 8.0.2
 
+# Set as executable
+
+`chmod +x tempo.sh`
+
 # Usage 
 
 `TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name tempo.sh`
