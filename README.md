@@ -10,16 +10,16 @@ NOTE: Tested with Tempo 8.0.2
 
 # Usage 
 
-`TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name tempo.sh`
+`TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name JIRAURL=https://jira.yourcompany.com tempo.sh`
 
-`TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name MIN=7.5 tempo.sh`
+`TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name  JIRAURL=https://jira.yourcompany.com MIN=7.5 tempo.sh`
 
 
 # Use it from crontab eg.
 
 At minute 10 past every hour from 9 through 18 on every day-of-week from Monday through Friday.
 
-`10 9-18 * * 1-5 TEMPOTOKEN=aaaa-bbb*bbb*cccc TEMPOUSERNAME=user.name /path/to/script/tempo.sh`
+`10 9-18 * * 1-5 TEMPOTOKEN=aaaa-bbb*bbb*cccc TEMPOUSERNAME=user.name  JIRAURL=https://jira.yourcompany.com /path/to/script/tempo.sh`
 
 # Dependencies
 
