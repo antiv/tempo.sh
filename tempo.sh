@@ -16,6 +16,7 @@ MIN=${MIN:-8}
 
 TEMPOTOKEN=${TEMPOTOKEN:-xxx-xxx-xxx}
 TEMPOUSERNAME=${TEMPOUSERNAME:-user.name}
+JIRAURL=${JIRAURL:-"https://jira.yourcompany.com"}
 DATEFROM=$(date +%Y-%m-%d -d "1 day ago")
 FROMDAY='yesterday'
 
@@ -27,8 +28,7 @@ fi
 
 echo -e "Get data from $RED$DATEFROM$NC"
 
-hours=$(/usr/bin/curl -s --location --request GET "https://jira.braintribe.com/plugins/servlet/tempo-getWorklog/?dateFrom=${DATEFROM}&format=xml&diffOnly=false&tempoApiToken=${TEMPOTOKEN}&userName=${TEMPOUSERNAME}"|/usr/bin/grep -oP "(?<=<hours>)[^<]+")
-
+hours=$(/usr/bin/curl -s --location --request GET "${JIRAURL}/plugins/servlet/tempo-getWorklog/?dateFrom=${DATEFROM}&format=xml&diffOnly=false&tempoApiToken=${TEMPOTOKEN}&userName=${TEMPOUSERNAME}"|/usr/bin/grep -oP "(?<=<hours>)[^<]+")
 array=($hours)
 
 SUM=0
