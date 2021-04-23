@@ -2,7 +2,7 @@
 # tempo.sh - read loged data
 # Tested with Tempo 8.0.2
 #
-# Usage `TEMPOTOKEN=aaaa-bbb*bbb*cccc TEMPOUSERNAME=user.name tempo.sh`
+# Usage `TEMPOTOKEN=aaaa-bbb-bbb-cccc TEMPOUSERNAME=user.name tempo.sh`
 #
 # Use it from crontab eg.
 # 10 9-18 * * 1-5 TEMPOTOKEN=aaaa-bbb*bbb*cccc TEMPOUSERNAME=user.name /path/to/script/tempo.sh
